@@ -7,7 +7,7 @@
 Este archivo.zip flasheable en twrp elimina una lista considerable de blotware dejando pre instalado el launcher de NOVA y las aplicaciones de ajustes, camara, superSU, contactos, correo de voz y telefono.
 (tal vez funcione las llamadas, no lo he testeado pero esta mas que seguro que llamadas por wifi o VolTe no sirve)
 
-# Deblaot.sh
+# Debloat.sh
 Este script elimina apps restantes que el archivo.zip flasheable dejo instaladas, añadi este script ya que en /system/app y /system/priv-app no encontre los paquetes de esas apps
 Desde este punto las llamadas no sirven
 
