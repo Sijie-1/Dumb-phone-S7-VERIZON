@@ -4,7 +4,7 @@
 
 # Clean S7
 ## Este archvio es extraido de un usuario de XDA, no recuerdo su usuario y pase un tiempo buscando en internet a ver si lo encontraba, pero no hubo rastro
-##Este archivo.zip flasheable en twrp elimina una lista considerable de blotware dejando pre instalado el launcher de NOVA.
+## Este archivo.zip flasheable en twrp elimina una lista considerable de blotware dejando pre instalado el launcher de NOVA.
 
 # Tipo de Clean_S7.zip
 
