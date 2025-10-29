@@ -1,17 +1,18 @@
 # Este debloat se uso en Android 6 con los añadidos de Root_Method_Rev_B/11_Bootloader_Using_Combo_Firmware en XDA por el usuario de jrkruse
 
-# Se recomienda ejecutar el archivo.zip flasheable despues de instalar la imagen de sistema 
+## Se recomienda ejecutar el archivo.zip flasheable justo despues de instalar la imagen de sistema 
 
 # Clean S7
-# Este archvio es extraido de un usuario de XDA, no recuerdo su usuario y pase un tiempo buscando en internet a ver si lo encontraba, pero no hubo rastro
-Este archivo.zip flasheable en twrp elimina una lista considerable de blotware dejando pre instalado el launcher de NOVA y las aplicaciones de ajustes, camara, superSU, contactos, correo de voz y telefono.
-(tal vez funcione las llamadas, no lo he testeado pero esta mas que seguro que llamadas por wifi o VolTe no sirve)
+## Este archvio es extraido de un usuario de XDA, no recuerdo su usuario y pase un tiempo buscando en internet a ver si lo encontraba, pero no hubo rastro
+##Este archivo.zip flasheable en twrp elimina una lista considerable de blotware dejando pre instalado el launcher de NOVA.
 
-# Debloat.sh
-Este script elimina apps restantes que el archivo.zip flasheable dejo instaladas, añadi este script ya que en /system/app y /system/priv-app no encontre los paquetes de esas apps
-Desde este punto las llamadas no sirven
+# Tipo de Clean_S7.zip
 
-Los datos moviles no he verificado su funcionamiento, tambien se borra los apn de verizon asi que te toca añadirlos en ajustes por tu cuenta
+## NGMS_NCalls
+No cuenta con los servicios de google y tampoco cuenta con la aplicación de telefono (no se si al instalar otra app de telefono vuelvan a funcionar las llamadas)
 
+## SGMS_SCalls
+Si  cuenta con los servicios de google y se dejo las apps de contacto y llamadas
 
-Bah, realmente hice este repositorio pq no sabia donde guardar los archivos y lo mas probable es que solo los use yo :v
+## NGMS_NCalls
+No cuenta con servicios de google pero si con la app de llamadas
