@@ -1,33 +1,57 @@
-# Clean S7 - Script de Optimización (Android 6)
+# Clean S7 — Script de Optimización (Android 6)
 
-Este script elimina aplicaciones residuales en el Samsung S7. Su diseño toma como base el entorno generado por el método de root de jrkruse en XDA (`Root_Method_Rev_B/11_Bootloader_Using_Combo_Firmware`). Recomiendo el uso de `system_g935_vzw_103122.img`, ya que de este se baso todo el script, debido a que el mismo anula la funcionalidad de la red Verizon. El entorno de red T-MB carece de soporte oficial para este proceso.
+⚠️ **ADVERTENCIA DE RESPONSABILIDAD**
 
-## Características
+Este script modifica archivos de sistema críticos. El usuario asume total responsabilidad por:
+- Daño o corrupción de la tarjeta SD
+- Dispositivo brickeado o no funcional
+- Pérdida de datos
+- Incompatibilidad con versiones de firmware no especificadas
 
-* **Depuración masiva del sistema:** Elimina decenas de aplicaciones preinstaladas de Samsung, integraciones de Microsoft, servicios de operador y utilidades redundantes.
-* **Preservación de servicios críticos:** Mantiene operativos los componentes de Google Mobile Services, el servicio de telefonía y mensajería SMS/MMS. Conserva los servicios IMS necesarios para el funcionamiento de los datos móviles.
-* **Reemplazo del entorno gráfico:** Elimina el launcher nativo TouchWiz y anula los asistentes de configuración iniciales de Samsung y KNOX.
-* **Integración de interfaz personalizada:** Instala Nova Launcher con permisos de aplicación privilegiada dentro de la ruta `/system/priv-app/`.
-* **Gestión de archivos nativa:** Incorpora ZArchiver como aplicación de sistema estándar en la ruta `/system/app/`.
-* **Gestión autónoma de particiones:** Ejecuta el montaje de las particiones `/data` y `/system` al iniciar la instalación. Desmonta ambas particiones de manera segura antes de finalizar.
+El autor no proporciona garantía de ningún tipo ni se responsabiliza por consecuencias derivadas del uso de este script.
+
+---
+
+## Descripción
+
+Script que elimina aplicaciones residuales en el Samsung S7 ejecutado sobre entorno generado por el método de root de jrkruse en XDA. Basado en `system_g935_vzw_103122.img` (anula funcionalidad de red Verizon). No compatible con entornos T-Mobile.
 
 ## Requisitos previos
 
-1. Obtén acceso root mediante el método del usuario jrkruse en los foros de XDA.
-2. Hacer uso de `system_g935_vzw_103122.img` mediante las instrucciones de la guía original de XDA.
-3. Flashea el archivo `xposed-v87.1-sdk23-arm64-custom-build-by-wanam-20161125.zip` desde tu entorno recovery (Paso opcional).
+1. Acceso root mediante el método de jrkruse (XDA forums)
+2. Archivo `system_g935_vzw_103122.img` flasheado según instrucciones XDA
+3. Batería del dispositivo por encima del 50%
+4. Tarjeta SD formateada en NTFS con espacio mínimo para `system.img`
+5. Archivos en la tarjeta SD:
+   - `system_g935_vzw_103122.img`
+   - `xposed-v87.1-sdk23-arm64-custom-build-by-wanam-20161125.zip`
+   - `XposedInstaller_by_dvdandroid_19_10_18.apk`
+   - `Clean.zip`
+
+## Características
+
+- **Depuración masiva:** Elimina decenas de aplicaciones preinstaladas (Samsung, Microsoft, operador)
+- **Preservación de servicios críticos:** Mantiene GMS, telefonía, SMS/MMS e IMS para datos móviles
+- **Reemplazo de launcher:** Elimina TouchWiz e instaladores de KNOX; instala Nova Launcher como aplicación privilegiada (`/system/priv-app/`)
+- **Gestor de archivos:** Incorpora ZArchiver en `/system/app/`
+- **Gestión automática de particiones:** Monta `/data` y `/system` al iniciar; desmonta de forma segura al finalizar
 
 ## Instrucciones de instalación
 
-1. Inicia el sistema operativo de forma normal (Primer boot).
-2. Instala la aplicación `XposedInstaller_by_dvdandroid_19_10_18.apk` provista en el repositorio (Paso opcional).
-3. Abre la aplicación FlashFire y navega a la sección Wipe.
-4. Selecciona estrictamente las siguientes casillas: 3rd party apps, Dalvik cache, Internal storage, Cache partition y Cache partition format.
-5. Ejecuta el borrado y espera.
-6. Reinicia el dispositivo en modo recovery.
-7. Flashea el archivo `Clean.zip` de este repositorio para aplicar el script de limpieza.
-8. Reinicia el dispositivo.
+1. Inicia el dispositivo en modo normal (primer boot)
+2. Instala `XposedInstaller_by_dvdandroid_19_10_18.apk` (opcional)
+3. Abre FlashFire y accede a la sección **Wipe**
+4. Marca estas casillas únicamente:
+   - 3rd party apps
+   - Dalvik cache
+   - Internal storage
+   - Cache partition
+   - Cache partition format
+5. Ejecuta el borrado y espera a que finalice
+6. Reinicia en modo recovery
+7. Flashea `Clean.zip` desde recovery
+8. Reinicia el dispositivo
 
 ## Notas de atribución
 
-El archivo base de este script de limpieza proviene de un usuario en los foros de XDA (No logre identificarlo). Este repositorio estructura y complementa el desarrollo original para facilitar su distribución.
+El archivo base de este script de limpieza proviene de un usuario en los foros de XDA (No logre identificar el post). Este repositorio estructura y complementa el desarrollo original.
