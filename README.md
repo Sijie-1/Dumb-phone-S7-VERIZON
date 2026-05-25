@@ -14,20 +14,20 @@ Este script elimina aplicaciones residuales en el Samsung S7. Su diseño toma co
 ## Requisitos previos
 
 1. Obtén acceso root mediante el método del usuario jrkruse en los foros de XDA.
-2. Flashea el archivo `system_g935_vzw_103122.img` mediante las instrucciones de la guía original.
-3. Flashea el archivo `xposed-v8.1.zip` desde tu entorno recovery (Paso opcional).
+2. Hacer uso de `system_g935_vzw_103122.img` mediante las instrucciones de la guía original de XDA.
+3. Flashea el archivo `xposed-v87.1-sdk23-arm64-custom-build-by-wanam-20161125.zip` desde tu entorno recovery (Paso opcional).
 
 ## Instrucciones de instalación
 
-1. Inicia el sistema operativo de forma normal.
-2. Instala la aplicación `xposed-v8.1.apk` provista en el repositorio.
-3. Configura el entorno de Xposed según tus preferencias.
-4. Abre la aplicación FlashFire y navega a la sección Wipe.
-5. Selecciona estrictamente las siguientes casillas: 3rd party apps, Dalvik cache, Internal storage, Cache partition y Cache partition format.
-6. Ejecuta el borrado y reinicia el dispositivo en modo recovery (TWRP).
-7. Flashea el archivo ZIP de este repositorio para aplicar el script de limpieza.
+1. Inicia el sistema operativo de forma normal (Primer boot).
+2. Instala la aplicación `XposedInstaller_by_dvdandroid_19_10_18.apk` provista en el repositorio (Paso opcional).
+3. Abre la aplicación FlashFire y navega a la sección Wipe.
+4. Selecciona estrictamente las siguientes casillas: 3rd party apps, Dalvik cache, Internal storage, Cache partition y Cache partition format.
+5. Ejecuta el borrado y espera.
+6. Reinicia el dispositivo en modo recovery.
+7. Flashea el archivo `Clean.zip` de este repositorio para aplicar el script de limpieza.
 8. Reinicia el dispositivo.
 
 ## Notas de atribución
 
-El archivo base de este script de limpieza proviene de un usuario no identificado en los foros de XDA. Este repositorio estructura y complementa el desarrollo original para facilitar su distribución.
+El archivo base de este script de limpieza proviene de un usuario en los foros de XDA (No logre identificarlo). Este repositorio estructura y complementa el desarrollo original para facilitar su distribución.
